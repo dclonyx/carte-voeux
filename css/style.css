@@ -6,12 +6,11 @@
 
 body, html {
     background-size: cover;
-    min-height: 100%;
+    /* min-height: 100%; */
 }
 
 body {
     background-size: cover;
-    overflow: hidden;
 }
 
 
@@ -104,11 +103,11 @@ body {
 /*------------------------sapin et boules/*------------------------*/
 
 .sapin{
+    z-index: 3;
     position: absolute;
-    top: 55%;
-    left: 2%;
-    height: 500px;
-    width: 200px;
+    top: 33%;
+    left: -42%;
+    height: 600px;
 }
 
 .sapin img{
@@ -124,32 +123,62 @@ body {
 }
 
 #boule-bleu{
-    top: 35%;
-    left: 40%;
+    top: 24%;
+    left: 45%;
     animation: transfert-bleu 3.5s infinite;
 }
 
 #boule-rouge{
-    top: 66%;
-    left: 25%;
+    top: 78%;
+    left: 34%;
     animation: transfert-rouge 4s infinite;
 }
 
 #boule-violet{
-    top: 60%;
-    left: 65%;
+    top: 40%;
+    left: 58%;
     animation: transfert-violet 2.5s infinite;
 }
 
 #boule-vert{
-    top: 52%;
-    left: 35%;
+    top: 54%;
+    left: 45%;
     animation: transfert-vert 1.5s infinite;
 }
 
 #boule-jaune{
-    top: 45%;
-    left: 55%;
+    top: 41%;
+    left: 41%;
+    animation: transfert-jaune 5.5s infinite;
+}
+
+#boule-bleu2{
+    top: 71%;
+    left: 63%;
+    animation: transfert-bleu 3.5s infinite;
+}
+
+#boule-rouge2{
+    top: 50%;
+    left: 60%;
+    animation: transfert-rouge 4s infinite;
+}
+
+#boule-violet2{
+    top: 67%;
+    left: 41%;
+    animation: transfert-violet 2.5s infinite;
+}
+
+#boule-vert2{
+    top: 90%;
+    left: 61%;
+    animation: transfert-vert 1.5s infinite;
+}
+
+#boule-jaune2{
+    top: 28%;
+    left: 53%;
     animation: transfert-jaune 5.5s infinite;
 }
 
@@ -180,8 +209,8 @@ body {
 
 .sapin svg{
     position: absolute;
-    top: 18%;
-    left: 26%;
+    top: 7%;
+    left: 44.5%;
 }
 
 polygon{
@@ -206,6 +235,7 @@ polygon{
     right: -100px;
     padding-right: 100px;
     transform: translateX(-50px);
+    z-index: 10;
 }
 
 .Neige__layer::after, .Neige__layer:nth-child(3)::before {
