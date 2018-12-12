@@ -1,19 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    background-size: cover;
+    overflow: hidden;
+}
+
+
 
 #contenair{
     background-image: linear-gradient(to bottom, rgb(5, 5, 143),rgb(5, 5, 143), rgb(23, 23, 78));
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
-    
     justify-content: center;
+    overflow: hidden;
 }
 
 /* ------------------------halo------------------- */
-#halo{
-    height:800px;
-    width:600px;
 
+#halo{
+    height:70%;
+    width:600px;
 } 
+
 #centre{
     stop-color: rgb(255,255,255);
     stop-opacity: 1;
@@ -22,7 +40,6 @@
     stop-color: rgb(5,5,143);
     stop-opacity: 1;
 }
-
 
 /* -------------------  logo Aformac ------------------ */
 
@@ -57,6 +74,191 @@
 #traineau{
     z-index: 2;
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 20%;
+    left: 0;
+    transform: rotate(10deg) scale(0.8);
+    animation: traineau 5s infinite;
+}
+
+@keyframes traineau {
+    0%{
+        transform: rotate(-45deg) scale(0);
+        top: 80%;
+        left: -100%;
+    }
+    
+    40%{
+        transform: rotate(-20deg) scale(0.8);
+    }
+    70%{
+        transform: rotate(0deg) scale(0.8);
+        top: 12%;
+        left: 18%;
+    }
+    100%{
+        transform: rotate(10deg) scale(0);
+        top: 5%;
+        left: 100%;
+    }
+}
+/*------------------------sapin et boules/*------------------------*/
+
+.sapin{
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    height: 500px;
+    width: 200px;
+}
+
+.sapin img{
+    width: 100%;
+    height: 100%;
+}
+
+.boules{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%
+}
+
+#boule-bleu{
+    top: 35%;
+    left: 40%;
+    animation: transfert-bleu 3.5s infinite;
+}
+
+#boule-rouge{
+    top: 66%;
+    left: 25%;
+    animation: transfert-rouge 4s infinite;
+}
+
+#boule-violet{
+    top: 60%;
+    left: 65%;
+    animation: transfert-violet 2.5s infinite;
+}
+
+#boule-vert{
+    top: 52%;
+    left: 35%;
+    animation: transfert-vert 1.5s infinite;
+}
+
+#boule-jaune{
+    top: 45%;
+    left: 55%;
+    animation: transfert-jaune 5.5s infinite;
+}
+
+@keyframes transfert-bleu{
+    from {background-color: white;}
+    to {background-color: blue;}
+}
+
+@keyframes transfert-rouge {
+    from {background-color: white;}
+    to {background-color: red;}
+}
+
+@keyframes transfert-violet {
+    from {background-color: white;}
+    to {background-color: purple;}
+}
+
+@keyframes transfert-vert {
+    from {background-color: white;}
+    to {background-color: green;}
+}
+
+@keyframes transfert-jaune {
+    from {background-color: white;}
+    to {background-color: yellow;}
+}
+
+.sapin svg{
+    position: absolute;
+    top: 18%;
+    left: 26%;
+}
+
+polygon{
+    fill:yellow;
+}
+
+/*/*------------------------gestion de lq neige/*------------------------*/
+
+.Neige {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.Neige__layer{
+    animation: wind 5s cubic-bezier(0.51, 0.01, 0.63, 0.99) infinite alternate;
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    padding-right: 100px;
+    transform: translateX(-50px);
+}
+
+.Neige__layer::after, .Neige__layer:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    background: url(../img/snow-sparse.png);
+    animation: neigeTombanteLight 5s linear infinite;/**/
+    transform: translateZ(50px);
+}
+
+.Neige__layer:nth-child(1) {
+    animation-duration: 3s; /**/
+}
+
+.Neige__layer:nth-child(1)::after {
+    background: url(../img/snow-verydense-blur.png);
+    transform: translateZ(25px);
+    animation-name: neigeTombanteBlur;
+}
+
+.Neige__layer:nth-child(2)::after {
+    background: url(../img/snow-dense.png);
+    animation-duration: 4s;/**/
+}
+
+.Neige__layer:nth-child(3)::after {
+    animation-duration: 10s;
+    background-size: 250px;
+}
+
+.Neige__layer:nth-child(3)::before {
+    animation-duration: 5s;/**/
+    background-size: 500px;
+}
+
+@keyframes neigeTombanteLight {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes neigeTombanteBlur {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes wind {
+    to {
+        transform: translateX(50px);
+    }
 }
