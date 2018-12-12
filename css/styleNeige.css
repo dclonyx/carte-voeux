@@ -1,0 +1,84 @@
+body, html {
+    background-color: black;
+    background-size: cover;
+    min-height: 100%;
+
+}
+
+body {
+    background-size: cover;
+    overflow: hidden;
+}
+
+.Neige {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.Neige__layer{
+    animation: wind 5s cubic-bezier(0.51, 0.01, 0.63, 0.99) infinite alternate;
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    padding-right: 100px;
+    transform: translateX(-50px);
+}
+
+.Neige__layer::after, .Neige__layer:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    background: url(../img/snow-sparse.png);
+    animation: neigeTombanteLight 5s linear infinite;/**/
+    transform: translateZ(50px);
+}
+
+.Neige__layer:nth-child(1) {
+    animation-duration: 3s; /**/
+}
+
+.Neige__layer:nth-child(1)::after {
+    background: url(../img/snow-verydense-blur.png);
+    transform: translateZ(25px);
+    animation-name: neigeTombanteBlur;
+}
+
+.Neige__layer:nth-child(2)::after {
+    background: url(../img/snow-dense.png);
+    animation-duration: 4s;/**/
+}
+
+.Neige__layer:nth-child(3)::after {
+    animation-duration: 10s;
+    background-size: 250px;
+}
+
+.Neige__layer:nth-child(3)::before {
+    animation-duration: 5s;/**/
+    background-size: 500px;
+}
+
+@keyframes neigeTombanteLight {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes neigeTombanteBlur {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes wind {
+    to {
+        transform: translateX(50px);
+    }
+}
