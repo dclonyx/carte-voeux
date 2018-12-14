@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="420mm"
-   height="594mm"
-   viewBox="0 0 420 594"
+   width="241.70535mm"
+   height="287.39935mm"
+   viewBox="0 0 241.70535 287.39935"
    version="1.1"
    id="svg8"
-   sodipodi:docname="Nouveau document 1.2018_12_13_10_39_33.0.svg"
+   sodipodi:docname="sapin.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <defs
      id="defs2" />
@@ -25,17 +25,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="542.11596"
-     inkscape:cy="768.75147"
+     inkscape:zoom="0.54619141"
+     inkscape:cx="-36.597957"
+     inkscape:cy="430.98296"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1853"
-     inkscape:window-height="1025"
-     inkscape:window-x="67"
+     inkscape:window-width="1920"
+     inkscape:window-height="960"
+     inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -52,7 +56,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,297)">
+     transform="translate(-93.89106,96.9922)">
     <path
        style="opacity:1;fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:2.08532619;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 191.20257,159.58693 44.44123,0.52481 c 2.34709,11.11928 1.04124,23.38762 23.09147,29.25274 h -88.52496 c 10.02682,-1.85602 20.71286,-14.00245 20.99226,-29.77755 z"

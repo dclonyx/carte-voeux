@@ -6,14 +6,12 @@
 
 body, html {
     background-size: cover;
-    /* min-height: 100%; */
+    min-height: 100%;
 }
 
 body {
     background-size: cover;
 }
-
-
 
 #contenair{
     background-image: linear-gradient(to bottom, rgb(5, 5, 143),rgb(5, 5, 143), rgb(23, 23, 78));
@@ -22,199 +20,6 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
-}
-
-/* ------------------------halo------------------- */
-
-#halo{
-    height:70%;
-    width:600px;
-} 
-
-#centre{
-    stop-color: rgb(255,255,255);
-    stop-opacity: 1;
-}
-#ext{
-    stop-color: rgb(5,5,143);
-    stop-opacity: 1;
-}
-
-/* -------------------  logo Aformac ------------------ */
-
-
-#logoAformac{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-#logo{
-    width: 800px;
-    height: auto;
-    margin-top: 80px;
-    margin-left: 110px;
-    margin-bottom: 50px;
-}
-#groupe{
-    width: 400px;
-    margin: auto;
-}
-#aformac{
-    width: 1000px;
-    margin-top: 90px;
-}
-
-/* -------------------------traineau ----------------------- */
-
-#traineau{
-    z-index: 2;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    transform: rotate(10deg) scale(0.8);
-    animation: traineau 5s infinite;
-}
-
-@keyframes traineau {
-    0%{
-        transform: rotate(-45deg) scale(0);
-        top: 80%;
-        left: -100%;
-    }
-    
-    40%{
-        transform: rotate(-20deg) scale(0.8);
-    }
-    70%{
-        transform: rotate(0deg) scale(0.8);
-        top: 12%;
-        left: 18%;
-    }
-    100%{
-        transform: rotate(10deg) scale(0);
-        top: 5%;
-        left: 100%;
-    }
-}
-/*------------------------sapin et boules/*------------------------*/
-
-.sapin{
-    z-index: 3;
-    position: absolute;
-    top: 33%;
-    left: -42%;
-    height: 600px;
-}
-
-.sapin img{
-    width: 100%;
-    height: 100%;
-}
-
-.boules{
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%
-}
-
-#boule-bleu{
-    top: 24%;
-    left: 45%;
-    animation: transfert-bleu 3.5s infinite;
-}
-
-#boule-rouge{
-    top: 78%;
-    left: 34%;
-    animation: transfert-rouge 4s infinite;
-}
-
-#boule-violet{
-    top: 40%;
-    left: 58%;
-    animation: transfert-violet 2.5s infinite;
-}
-
-#boule-vert{
-    top: 54%;
-    left: 45%;
-    animation: transfert-vert 1.5s infinite;
-}
-
-#boule-jaune{
-    top: 41%;
-    left: 41%;
-    animation: transfert-jaune 5.5s infinite;
-}
-
-#boule-bleu2{
-    top: 71%;
-    left: 63%;
-    animation: transfert-bleu 3.5s infinite;
-}
-
-#boule-rouge2{
-    top: 50%;
-    left: 60%;
-    animation: transfert-rouge 4s infinite;
-}
-
-#boule-violet2{
-    top: 67%;
-    left: 41%;
-    animation: transfert-violet 2.5s infinite;
-}
-
-#boule-vert2{
-    top: 90%;
-    left: 61%;
-    animation: transfert-vert 1.5s infinite;
-}
-
-#boule-jaune2{
-    top: 28%;
-    left: 53%;
-    animation: transfert-jaune 5.5s infinite;
-}
-
-@keyframes transfert-bleu{
-    from {background-color: white;}
-    to {background-color: blue;}
-}
-
-@keyframes transfert-rouge {
-    from {background-color: white;}
-    to {background-color: red;}
-}
-
-@keyframes transfert-violet {
-    from {background-color: white;}
-    to {background-color: purple;}
-}
-
-@keyframes transfert-vert {
-    from {background-color: white;}
-    to {background-color: green;}
-}
-
-@keyframes transfert-jaune {
-    from {background-color: white;}
-    to {background-color: yellow;}
-}
-
-.sapin svg{
-    position: absolute;
-    top: 7%;
-    left: 44.5%;
-}
-
-polygon{
-    fill:yellow;
 }
 
 /*/*------------------------gestion de lq neige/*------------------------*/
@@ -292,3 +97,239 @@ polygon{
         transform: translateX(50px);
     }
 }
+
+/* -------------------  logo Aformac ------------------ */
+
+#logoAformac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 70%;
+}
+#arcs{
+    position: relative; 
+}
+#disque{
+    position: absolute;
+}
+
+/* -------------------------traineau ----------------------- */
+
+#traineau{
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 20%;
+    transform: rotate(10deg);
+    animation: traineau 5s infinite;
+}
+
+@keyframes traineau {
+    0%{
+        transform: rotate(-45deg) scale(0);
+        top: 90%;
+        left: 5%;
+    }
+    30%{
+        transform: rotate(-5deg) scale(1);
+        top: 25%;
+        left: 27%;
+    }
+    70%{
+        transform: rotate(10deg) scale(1);
+        top: 15%;
+        left: 45%;
+    }
+    100%{
+        transform: rotate(15deg) scale(0);
+        top: 20%;
+        left: 90%;
+    }
+}
+
+/*------------------------ gestion du motAformac ------------------------*/
+
+#motAformac{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 105%;
+}
+img{
+    width: 100%;
+}
+#sapin{
+    z-index: 3;
+    position: absolute;
+    bottom: -5%;
+    left: -45%;
+    width: 55%;
+}
+#lettreF{
+    position: absolute;
+    width: 10%;
+    bottom: -5%;
+    left: 15%;
+}
+#bonhomeDeNeige{
+    position: absolute;
+    width: 25%;
+    bottom: -28%;
+    left: 30%;
+}
+#lettreR{
+    position: absolute;
+    width: 12%;
+    bottom: -3%;
+    left: 63%;
+}
+#lettreM{
+    position: absolute;
+    width: 25%;
+    bottom: -55%;
+    left: 79%;
+}
+#lettreM2{
+    z-index: 3;
+}
+#lumiere{
+    position: absolute;
+    /* background-color: yellow; */
+    width: 70%;
+    height: 45%;  
+    bottom: 45%;
+    left: 13%;
+    z-index: 1;
+}
+#lettreA{
+    position: absolute;
+    width: 20%;
+    bottom: -31%;
+    left: 100%;
+}
+#lettreC{
+    position: absolute;
+    width: 18%;
+    bottom: -18%;
+    left: 120%;
+}
+#chausette{
+    position: absolute;
+    width: 5%;
+    bottom: 21%;
+    left: 111%;
+}
+
+/*------------------------sapin et boules/*------------------------*/
+
+.sapin img{
+    width: 100%;
+    height: 100%;
+}
+
+.boules{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%
+}
+
+#boule-bleu{
+    top: 24%;
+    left: 37%;
+    animation: transfert-bleu 3.5s infinite;
+}
+
+#boule-rouge{
+    top: 78%;
+    left: 14%;
+    animation: transfert-rouge 4s infinite;
+}
+
+#boule-violet{
+    top: 57%;
+    left: 26%;
+    animation: transfert-violet 2.5s infinite;
+}
+
+#boule-vert{
+    top: 60%;
+    left: 45%;
+    animation: transfert-vert 1.5s infinite;
+}
+
+#boule-jaune{
+    top: 41%;
+    left: 41%;
+    animation: transfert-jaune 5.5s infinite;
+}
+
+#boule-bleu2{
+    top: 71%;
+    left: 63%;
+    animation: transfert-bleu 3.5s infinite;
+}
+
+#boule-rouge2{
+    top: 50%;
+    left: 60%;
+    animation: transfert-rouge 4s infinite;
+}
+
+#boule-violet2{
+    top: 76%;
+    left: 41%;
+    animation: transfert-violet 2.5s infinite;
+}
+
+#boule-vert2{
+    top: 78%;
+    left: 77%;
+    animation: transfert-vert 1.5s infinite;
+}
+
+#boule-jaune2{
+    top: 28%;
+    left: 53%;
+    animation: transfert-jaune 5.5s infinite;
+}
+
+@keyframes transfert-bleu{
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+@keyframes transfert-rouge {
+    from {background-color: purple;}
+    to {background-color: red;}
+}
+
+@keyframes transfert-violet {
+    from {background-color: yellow;}
+    to {background-color: purple;}
+}
+
+@keyframes transfert-vert {
+    from {background-color: blue;}
+    to {background-color: green;}
+}
+
+@keyframes transfert-jaune {
+    from {background-color: green;}
+    to {background-color: yellow;}
+}
+
+.sapin svg{
+    position: absolute;
+    top: 7%;
+    left: 44.5%;
+}
+
+polygon{
+    fill:yellow;
+}
+

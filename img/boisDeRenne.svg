@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="420mm"
-   height="594mm"
-   viewBox="0 0 420 594"
+   width="88.025803mm"
+   height="235.44513mm"
+   viewBox="0 0 88.025803 235.44513"
    version="1.1"
    id="svg8"
    sodipodi:docname="boisDeRenne.svg"
@@ -25,17 +25,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="412.44654"
-     inkscape:cy="1285.0798"
+     inkscape:zoom="0.38621565"
+     inkscape:cx="-550.64948"
+     inkscape:cy="328.73796"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1853"
-     inkscape:window-height="1025"
-     inkscape:window-x="67"
+     inkscape:window-width="1920"
+     inkscape:window-height="960"
+     inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -52,7 +56,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,297)">
+     transform="translate(-171.06412,142.84062)">
     <path
        style="opacity:1;fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:1.17999995;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 185.57771,-74.175699 -11.45997,-53.986781 c 6.49439,-9.92086 13.35141,-16.17253 21.43308,-10.03285 8.06261,20.66345 8.05994,45.847691 10.30623,45.015461 12.71199,-4.70971 21.97858,-2.35028 28.01178,-0.72639 4.48646,1.20756 15.56927,4.82582 19.06384,17.69061 2.54852,6.8312 3.22236,10.91658 1.68635,14.05661 -1.75709,3.59199 -3.61739,2.57599 -6.62672,1.68025 -10.23463,-3.0464 -35.1024,-29.38312 -47.25475,-12.99598 -9.58244,12.92169 17.17672,52.577635 40.79362,56.141083 12.4947,1.885268 16.53542,28.88868 15.0701,31.120477 -4.53825,6.912149 -9.35439,7.587927 -14.65626,-0.876413 -4.91615,-7.8485335 -15.74936,-17.7632005 -30.84816,-34.202193 -1.07333,-1.168597 -3.52378,-4.976732 -5.44082,-2.350611 -0.7554,1.034793 -2.01045,2.321464 -3.25066,3.597822 -3.71135,3.819573 -1.13786,10.7019945 -1.89287,16.2002195 -0.29384,2.139848 -0.17087,4.29766396 -0.25412,6.415073 -0.44488,11.3157765 -3.80304,22.3332855 -1.27224,31.5475435 2.08524,7.592021 1.76266,15.043512 5.07104,19.780519 13.29343,19.033856 15.64686,27.944421 13.54277,31.060994 -7.68291,11.379915 -11.70485,5.573696 -11.70485,5.573696 -5.91403,-5.019421 -10.18795,-11.993269 -11.79017,-15.114662 -2.87925,-5.609272 -17.64725,-20.370548 -8.79651,-78.0950945 0.75588,-4.92986 0.16969,-11.7542785 0.74682,-19.6538845 1.44224,-19.740889 0.27397,-45.144719 -0.47753,-51.845499 z"
