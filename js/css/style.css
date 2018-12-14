@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    background-size: cover;
+}
+
+#contenair{
+    background-image: linear-gradient(to bottom, rgb(23, 23, 78),rgb(5, 5, 143),rgb(5, 5, 143) ,rgb(23, 23, 78), rgb(2, 16, 54),rgb(45, 79, 175),white);     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*/*------------------------gestion de lq neige/*------------------------*/
+
+.Neige {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.Neige__layer{
+    animation: wind 5s cubic-bezier(0.51, 0.01, 0.63, 0.99) infinite alternate;
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    padding-right: 100px;
+    transform: translateX(-50px);
+    z-index: 10;
+}
+
+.Neige__layer::after, .Neige__layer:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    background: url(../img/snow-sparse.png);
+    animation: neigeTombanteLight 5s linear infinite;/**/
+    transform: translateZ(50px);
+}
+
+.Neige__layer:nth-child(1) {
+    animation-duration: 3s; /**/
+}
+
+.Neige__layer:nth-child(1)::after {
+    background: url(../img/snow-verydense-blur.png);
+    transform: translateZ(25px);
+    animation-name: neigeTombanteBlur;
+}
+
+.Neige__layer:nth-child(2)::after {
+    background: url(../img/snow-dense.png);
+    animation-duration: 4s;/**/
+}
+
+.Neige__layer:nth-child(3)::after {
+    animation-duration: 10s;
+    background-size: 250px;
+}
+
+.Neige__layer:nth-child(3)::before {
+    animation-duration: 5s;/**/
+    background-size: 500px;
+}
+
+@keyframes neigeTombanteLight {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes neigeTombanteBlur {
+    from {
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+
+@keyframes wind {
+    to {
+        transform: translateX(50px);
+    }
+}
+
+/* -------------------  logo Aformac ------------------ */
+.logoGN{
+    height: auto;
+    opacity: 0.1;
+}
+#logoAformac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 60%;
+}
+#arcs{
+    position: relative; 
+}
+
+/* ------------------------halo------------------------------- */
+#disque{
+    position: absolute;
+    left: 36%;
+    animation: halo 2s infinite;
+    border-radius: 50%;
+    background-color: rgb(228, 145, 22);
+}
+@keyframes halo{
+    0% {box-shadow: 0 0 20px white,0 0 100px rgb(236, 236, 162);}
+    50% {box-shadow: 0 0 100px white,0 0 200px rgb(236, 236, 162);}
+    100% {box-shadow: 0 0 20px white,0 0 100px rgb(236, 236, 162);}
+}
+/* -------------------------traineau ----------------------- */
+
+#traineau{
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    width: 50%;
+    transform: rotate(10deg);
+    animation: traineau 4s infinite;
+}
+
+@keyframes traineau {
+    0%{
+        transform: rotate(0deg) scale(0);
+        top: 10%;
+        left: -100%;
+    }
+    70%{
+        transform: rotate(10deg) scale(1);
+        top: 20%;
+        left: 70%;
+    }
+    100%{
+        transform: rotate(10deg) scale(0);
+        top: 20%;
+        left: 150%;
+    }
+}
+
+/*------------------------ gestion du motAformac ------------------------*/
+
+#motAformac{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 105%;
+}
+img{
+    width: 100%;
+}
+#sapin{
+    z-index: 3;
+    position: absolute;
+    width: 40%;
+    bottom: -5%;
+    left: -35%;
+}
+#lettreF{
+    position: absolute;
+    width: 11%;
+    bottom: -5%;
+    left: 6%;
+}
+#bonhomeDeNeige{
+    position: absolute;
+    width: 25%;
+    bottom: -38%;
+    left: 20%;
+}
+#lettreR{
+    position: absolute;
+    width: 10%;
+    bottom: -5%;
+    left: 50%;
+}
+
+ #lettreM{
+    position: absolute;
+    width: 30%;
+    bottom: -77%;
+    left: 63%;
+}
+
+@keyframes rayonne{
+    0% {background-color:rgb(243, 189, 12); }
+    25% {background-color:yellow;}
+    50% {background-color: rgb(241, 240, 148);}
+    75% {background-color: yellow;}
+    100% {background-color:rgb(243, 189, 12); }
+}
+#lettreA{
+    position: absolute;
+    width: 23%;
+    bottom: -42%;
+    left: 89%;
+}
+#lettreC{
+    position: absolute;
+    width: 21%;
+    bottom: -21%;
+    left: 109%;
+}
+#chausette{
+    position: absolute;
+    width: 8%;
+    bottom: 20%;
+    left: 120%;
+}
+.chausette:hover{
+    transform: rotate(150deg);
+}
+
+/*------------------------sapin et boules/*------------------------*/
+
+.sapin img{
+    width: 100%;
+    height: 100%;
+}
+
+.boules{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%
+}
+
+#boule-bleu{
+    top: 24%;
+    left: 37%;
+    animation: transfert-bleu 3.5s infinite;
+}
+
+#boule-rouge{
+    top: 75%;
+    left: 14%;
+    animation: transfert-rouge 4s infinite;
+}
+
+#boule-violet{
+    top: 50%;
+    left: 26%;
+    animation: transfert-violet 2.5s infinite;
+}
+
+#boule-vert{
+    top: 65%;
+    left: 65%;
+    animation: transfert-vert 1.5s infinite;
+}
+
+#boule-jaune{
+    top: 40%;
+    left: 55%;
+    animation: transfert-jaune 5.5s infinite;
+}
+
+@keyframes transfert-bleu{
+    0% {background-color: red;}
+    25% {background-color: blue;}
+    50% {background-color: yellow;}
+    75% {background-color: purple;}
+    100% {background-color: pink;}
+}
+
+@keyframes transfert-rouge {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: purple;}
+    75% {background-color: blue;}
+    100% {background-color: pink;}
+}
+
+@keyframes transfert-violet {
+    0% {background-color: yellow;}
+    25% {background-color: red;}
+    50% {background-color: pink;}
+    75% {background-color: blue;}
+    100% {background-color: purple;}
+}
+
+@keyframes transfert-vert {
+    0% {background-color: blue;}
+    25% {background-color: pink;}
+    50% {background-color: red;}
+    75% {background-color: purple;}
+    100% {background-color: yellow;}
+}
+
+@keyframes transfert-jaune {
+    0% {background-color: red;}
+    25% {background-color: pink;}
+    50% {background-color: purple;}
+    75% {background-color: yellow;}
+    100% {background-color: blue;}
+}
+
+/* ---------------------------------etoile sapin------------------------- */
+#etoile{
+    position: absolute;
+    top: -20%;
+    left: 30%;
+}
+polygon{
+    fill:yellow;
+    animation: etoile 4s infinite;
+}
+@keyframes etoile{
+    0% {fill:yellow;}
+    50% {fill:white;}
+    100% {fill:yellow;}
+}
+
+#souhait{
+    position: absolute;
+    bottom: 7%;
+    font-size: 3em;
+    color: red;
+    text-shadow: 3px 3px 5px rgb(241, 241, 85);
+}
+/* ----------------18pixel------------------- */
+#pixel{
+    z-index: 5;
+    position: absolute;
+    width: 5%;
+    bottom: 60%;
+    left: 70%;
+    animation: pixel 3s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes pixel {
+    0% {
+        transform: rotateX(0deg);
+        width: 5%;
+        bottom: 60%;
+        left: 70%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(360deg);
+        width: 18%;
+        bottom: -4%;
+        opacity: 1;
+    }
+}
+#envoi{
+    z-index: 10;
+    position: absolute;
+    width: 10%;
+    right: 1%;
+    top: 1%;
+}
+#envoi img{
+    width: 50%;
+}
+
+form{
+    z-index: 9;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+#formulaire{
+    display: none;
+}

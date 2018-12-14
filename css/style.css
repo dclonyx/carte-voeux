@@ -367,3 +367,27 @@ polygon{
         opacity: 1;
     }
 }
+#envoi{
+    z-index: 10;
+    position: absolute;
+    width: 10%;
+    right: 1%;
+    top: 1%;
+}
+#envoi img{
+    width: 50%;
+}
+
+form{
+    z-index: 9;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+#formulaire{
+    display: none;
+}
