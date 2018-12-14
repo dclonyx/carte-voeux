@@ -14,8 +14,7 @@ body {
 }
 
 #contenair{
-    background-image: linear-gradient(to bottom, rgb(5, 5, 143),rgb(5, 5, 143), rgb(23, 23, 78));
-    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(23, 23, 78),rgb(5, 5, 143),rgb(5, 5, 143) ,rgb(23, 23, 78), rgb(2, 16, 54),rgb(45, 79, 175),white);     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -134,10 +133,10 @@ body {
 #traineau{
     z-index: 2;
     position: absolute;
-    top: 8%;
-    left: 45%;
-    width: 20%;
-    transform: rotate(0deg);
+    top: 20%;
+    left: 70%;
+    width: 50%;
+    transform: rotate(10deg);
     animation: traineau 4s infinite;
 }
 
@@ -145,17 +144,17 @@ body {
     0%{
         transform: rotate(0deg) scale(0);
         top: 10%;
-        left: 5%;
+        left: -100%;
     }
     70%{
         transform: rotate(10deg) scale(1);
-        top: 8%;
-        left: 45%;
+        top: 20%;
+        left: 70%;
     }
     100%{
         transform: rotate(10deg) scale(0);
         top: 20%;
-        left: 90%;
+        left: 150%;
     }
 }
 
@@ -180,7 +179,7 @@ img{
 #lettreF{
     position: absolute;
     width: 11%;
-    bottom: -8%;
+    bottom: -5%;
     left: 6%;
 }
 #bonhomeDeNeige{
@@ -195,23 +194,20 @@ img{
     bottom: -5%;
     left: 50%;
 }
-#lettreM{
+
+ #lettreM{
     position: absolute;
     width: 30%;
     bottom: -77%;
-    left: 62%;
+    left: 63%;
 }
-#lettreM2{
-    z-index: 3;
-}
-#lumiere{
-    position: absolute;
-    /* background-color: yellow; */
-    width: 60%;
-    height: 45%;  
-    bottom: 45%;
-    left: 13%;
-    z-index: 1;
+
+@keyframes rayonne{
+    0% {background-color:rgb(243, 189, 12); }
+    25% {background-color:yellow;}
+    50% {background-color: rgb(241, 240, 148);}
+    75% {background-color: yellow;}
+    100% {background-color:rgb(243, 189, 12); }
 }
 #lettreA{
     position: absolute;
@@ -319,18 +315,55 @@ img{
     100% {background-color: blue;}
 }
 
+/* ---------------------------------etoile sapin------------------------- */
 #etoile{
     position: absolute;
     top: -20%;
     left: 30%;
 }
-
 polygon{
     fill:yellow;
+    animation: etoile 4s infinite;
 }
+@keyframes etoile{
+    0% {fill:yellow;}
+    50% {fill:white;}
+    100% {fill:yellow;}
+}
+
 #souhait{
     position: absolute;
     bottom: 7%;
     font-size: 3em;
     color: red;
+    text-shadow: 3px 3px 5px rgb(241, 241, 85);
+}
+/* ----------------18pixel------------------- */
+#pixel{
+    z-index: 5;
+    position: absolute;
+    width: 5%;
+    bottom: 60%;
+    left: 70%;
+    animation: pixel 3s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes pixel {
+    0% {
+        transform: rotateX(0deg);
+        width: 5%;
+        bottom: 60%;
+        left: 70%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(360deg);
+        width: 18%;
+        bottom: -4%;
+        opacity: 1;
+    }
 }
