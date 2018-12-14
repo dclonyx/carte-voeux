@@ -99,7 +99,10 @@ body {
 }
 
 /* -------------------  logo Aformac ------------------ */
-
+.logoGN{
+    height: auto;
+    opacity: 0.1;
+}
 #logoAformac{
     display: flex;
     flex-direction: column;
@@ -107,25 +110,35 @@ body {
     position: absolute;
     top: 0;
     z-index: 1;
-    height: 70%;
+    height: 60%;
 }
 #arcs{
     position: relative; 
 }
+
+/* ------------------------halo------------------------------- */
 #disque{
     position: absolute;
+    left: 36%;
+    animation: halo 2s infinite;
+    border-radius: 50%;
+    background-color: rgb(228, 145, 22);
 }
-
+@keyframes halo{
+    0% {box-shadow: 0 0 20px white,0 0 100px rgb(236, 236, 162);}
+    50% {box-shadow: 0 0 100px white,0 0 200px rgb(236, 236, 162);}
+    100% {box-shadow: 0 0 20px white,0 0 100px rgb(236, 236, 162);}
+}
 /* -------------------------traineau ----------------------- */
 
 #traineau{
     z-index: 2;
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 45%;
     width: 20%;
     transform: rotate(10deg);
-    animation: traineau 5s infinite;
+    animation: traineau 4s infinite;
 }
 
 @keyframes traineau {
@@ -135,13 +148,13 @@ body {
         left: 5%;
     }
     30%{
-        transform: rotate(-5deg) scale(1);
-        top: 25%;
-        left: 27%;
+        transform: rotate(-10deg) scale(1);
+        top: 20%;
+        left: 30%;
     }
     70%{
         transform: rotate(10deg) scale(1);
-        top: 15%;
+        top: 8%;
         left: 45%;
     }
     100%{
@@ -165,33 +178,33 @@ img{
 #sapin{
     z-index: 3;
     position: absolute;
+    width: 40%;
     bottom: -5%;
-    left: -45%;
-    width: 55%;
+    left: -35%;
 }
 #lettreF{
     position: absolute;
-    width: 10%;
-    bottom: -5%;
-    left: 15%;
+    width: 11%;
+    bottom: -8%;
+    left: 6%;
 }
 #bonhomeDeNeige{
     position: absolute;
     width: 25%;
-    bottom: -28%;
-    left: 30%;
+    bottom: -38%;
+    left: 20%;
 }
 #lettreR{
     position: absolute;
-    width: 12%;
-    bottom: -3%;
-    left: 63%;
+    width: 10%;
+    bottom: -5%;
+    left: 50%;
 }
 #lettreM{
     position: absolute;
-    width: 25%;
-    bottom: -55%;
-    left: 79%;
+    width: 30%;
+    bottom: -77%;
+    left: 62%;
 }
 #lettreM2{
     z-index: 3;
@@ -199,7 +212,7 @@ img{
 #lumiere{
     position: absolute;
     /* background-color: yellow; */
-    width: 70%;
+    width: 60%;
     height: 45%;  
     bottom: 45%;
     left: 13%;
@@ -207,21 +220,21 @@ img{
 }
 #lettreA{
     position: absolute;
-    width: 20%;
-    bottom: -31%;
-    left: 100%;
+    width: 23%;
+    bottom: -42%;
+    left: 89%;
 }
 #lettreC{
     position: absolute;
-    width: 18%;
-    bottom: -18%;
-    left: 120%;
+    width: 21%;
+    bottom: -21%;
+    left: 109%;
 }
 #chausette{
     position: absolute;
-    width: 5%;
-    bottom: 21%;
-    left: 111%;
+    width: 8%;
+    bottom: 20%;
+    left: 120%;
 }
 
 /*------------------------sapin et boules/*------------------------*/
@@ -245,88 +258,73 @@ img{
 }
 
 #boule-rouge{
-    top: 78%;
+    top: 75%;
     left: 14%;
     animation: transfert-rouge 4s infinite;
 }
 
 #boule-violet{
-    top: 57%;
+    top: 50%;
     left: 26%;
     animation: transfert-violet 2.5s infinite;
 }
 
 #boule-vert{
-    top: 60%;
-    left: 45%;
+    top: 65%;
+    left: 65%;
     animation: transfert-vert 1.5s infinite;
 }
 
 #boule-jaune{
-    top: 41%;
-    left: 41%;
-    animation: transfert-jaune 5.5s infinite;
-}
-
-#boule-bleu2{
-    top: 71%;
-    left: 63%;
-    animation: transfert-bleu 3.5s infinite;
-}
-
-#boule-rouge2{
-    top: 50%;
-    left: 60%;
-    animation: transfert-rouge 4s infinite;
-}
-
-#boule-violet2{
-    top: 76%;
-    left: 41%;
-    animation: transfert-violet 2.5s infinite;
-}
-
-#boule-vert2{
-    top: 78%;
-    left: 77%;
-    animation: transfert-vert 1.5s infinite;
-}
-
-#boule-jaune2{
-    top: 28%;
-    left: 53%;
+    top: 40%;
+    left: 55%;
     animation: transfert-jaune 5.5s infinite;
 }
 
 @keyframes transfert-bleu{
-    from {background-color: red;}
-    to {background-color: blue;}
+    0% {background-color: red;}
+    25% {background-color: blue;}
+    50% {background-color: yellow;}
+    75% {background-color: purple;}
+    100% {background-color: pink;}
 }
 
 @keyframes transfert-rouge {
-    from {background-color: purple;}
-    to {background-color: red;}
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: purple;}
+    75% {background-color: blue;}
+    100% {background-color: pink;}
 }
 
 @keyframes transfert-violet {
-    from {background-color: yellow;}
-    to {background-color: purple;}
+    0% {background-color: yellow;}
+    25% {background-color: red;}
+    50% {background-color: pink;}
+    75% {background-color: blue;}
+    100% {background-color: purple;}
 }
 
 @keyframes transfert-vert {
-    from {background-color: blue;}
-    to {background-color: green;}
+    0% {background-color: blue;}
+    25% {background-color: pink;}
+    50% {background-color: red;}
+    75% {background-color: purple;}
+    100% {background-color: yellow;}
 }
 
 @keyframes transfert-jaune {
-    from {background-color: green;}
-    to {background-color: yellow;}
+    0% {background-color: red;}
+    25% {background-color: pink;}
+    50% {background-color: purple;}
+    75% {background-color: yellow;}
+    100% {background-color: blue;}
 }
 
-.sapin svg{
+#etoile{
     position: absolute;
-    top: 7%;
-    left: 44.5%;
+    top: -20%;
+    left: 30%;
 }
 
 polygon{
