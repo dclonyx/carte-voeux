@@ -26,7 +26,7 @@
             </div> 
             <div id="formulaire"> 
                 <form method="POST">
-                    Envoyer la carte :
+                    Envoyer la carte sur :
                     <input type="email"  name="email" placeholder="email">
                     <input type="submit" name="submit" value="valider">
                     <?php

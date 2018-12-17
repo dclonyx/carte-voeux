@@ -373,6 +373,9 @@ polygon{
     width: 10%;
     right: 1%;
     top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #envoi img{
     width: 50%;
