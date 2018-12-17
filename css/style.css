@@ -367,6 +367,7 @@ polygon{
         opacity: 1;
     }
 }
+
 #envoi{
     z-index: 10;
     position: absolute;
@@ -377,20 +378,22 @@ polygon{
     flex-direction: column;
     align-items: center;
 }
+
 #envoi img{
-    width: 50%;
+    width: 40%;
 }
 
 form{
     z-index: 9;
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 90%;
 }
+
 #formulaire{
     display: none;
 }

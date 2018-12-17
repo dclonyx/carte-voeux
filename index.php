@@ -21,9 +21,7 @@
             <div class="Neige__layer"></div>
         </div>
         <div id="envoi">
-            <div >
-                <img id="icone" src="./img/icone_contact.png" alt="envoi">
-            </div> 
+            <img id="icone" src="./img/icone_contact.png" alt="envoi">
             <div id="formulaire"> 
                 <form method="POST">
                     Envoyer la carte sur :
@@ -46,10 +44,8 @@
                                 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
                                 mail($to, $object, $message, $headers);
 
-                        }
-
+                    }
                     ?>  
-                    
                 </form>
             </div>  
         </div> 
