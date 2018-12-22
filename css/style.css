@@ -5,20 +5,26 @@
 }
 
 body, html {
-    background-size: cover;
-    min-height: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-
-body {
-    background-size: cover;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f4183;
 }
 
 #contenair{
-    background-image: linear-gradient(to bottom, rgb(23, 23, 78),rgb(5, 5, 143),rgb(5, 5, 143) ,rgb(23, 23, 78), rgb(2, 16, 54),rgb(45, 79, 175),white);     width: 100%;
-    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(23, 23, 78),rgb(5, 5, 143),rgb(5, 5, 143) ,rgb(23, 23, 78), rgb(2, 16, 54),rgb(45, 79, 175),white);
+    width: 960px;
+    height: 540px;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    position: fixed;
+    border-radius: 10px
 }
 
 /*/*------------------------gestion de lq neige/*------------------------*/
@@ -109,19 +115,23 @@ body {
     position: absolute;
     top: 0;
     z-index: 1;
-    height: 60%;
+    height: 270px;
 }
 #arcs{
     position: relative; 
+    width: 300px;
+    top: 50px;
+    left: 105px;
 }
 
 /* ------------------------halo------------------------------- */
 #disque{
     position: absolute;
-    left: 36%;
-    animation: halo 2s infinite;
+    left: 210px;
+    animation: halo 4s infinite;
     border-radius: 50%;
     background-color: rgb(228, 145, 22);
+    width: 80px;
 }
 @keyframes halo{
     0% {box-shadow: 0 0 20px white,0 0 100px rgb(236, 236, 162);}
@@ -133,38 +143,38 @@ body {
 #traineau{
     z-index: 2;
     position: absolute;
-    top: 20%;
-    left: 70%;
-    width: 50%;
-    transform: rotate(10deg);
-    animation: traineau 4s infinite;
+    top: 10px;
+    left: 198px;
+    width: 300px;
+    transform: rotate(5deg);
+    animation: traineau 8s infinite;
 }
 
 @keyframes traineau {
     0%{
         transform: rotate(0deg) scale(0);
-        top: 10%;
-        left: -100%;
+        top: 0;
+        left: -450px;
     }
     70%{
-        transform: rotate(10deg) scale(1);
-        top: 20%;
-        left: 70%;
+        transform: rotate(5deg) scale(1);
+        top: 10px;
+        left: 198px;
     }
     100%{
         transform: rotate(10deg) scale(0);
-        top: 20%;
-        left: 150%;
+        top: -30px;
+        left: 540px;
     }
 }
 
 /*------------------------ gestion du motAformac ------------------------*/
 
 #motAformac{
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    top: 105%;
+    position: relative;
+    width: 500px;
+    height: 150px;
+    top: 140px;
 }
 img{
     width: 100%;
@@ -172,34 +182,35 @@ img{
 #sapin{
     z-index: 3;
     position: absolute;
-    width: 40%;
-    bottom: -5%;
-    left: -35%;
+    width: 150px;
+    bottom: -4px;
+    left: -110px;
 }
 #lettreF{
     position: absolute;
-    width: 11%;
-    bottom: -5%;
-    left: 6%;
+    z-index: 6;
+    width: 40px;
+    bottom: -5px;
+    left: 60px;
 }
 #bonhomeDeNeige{
     position: absolute;
-    width: 25%;
-    bottom: -38%;
-    left: 20%;
+    width: 80px;
+    bottom: -20px;
+    left: 125px;
 }
 #lettreR{
     position: absolute;
-    width: 10%;
-    bottom: -5%;
-    left: 50%;
+    width: 30px;
+    bottom: -3px;
+    left: 248px;
 }
 
- #lettreM{
+#lettreM{
     position: absolute;
-    width: 30%;
-    bottom: -77%;
-    left: 63%;
+    width: 100px;
+    bottom: -43px;
+    left: 305px;
 }
 
 @keyframes rayonne{
@@ -211,21 +222,21 @@ img{
 }
 #lettreA{
     position: absolute;
-    width: 23%;
-    bottom: -42%;
-    left: 89%;
+    width: 80px;
+    bottom: -25px;
+    left: 415px;
 }
 #lettreC{
     position: absolute;
-    width: 21%;
-    bottom: -21%;
-    left: 109%;
+    width: 80px;
+    bottom: -14px;
+    left: 505px;
 }
 #chausette{
     position: absolute;
-    width: 8%;
-    bottom: 20%;
-    left: 120%;
+    width: 30px;
+    bottom: 10px;
+    left: 550px;
 }
 .chausette:hover{
     transform: rotate(150deg);
@@ -240,38 +251,38 @@ img{
 
 .boules{
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%
 }
 
 #boule-bleu{
     top: 24%;
-    left: 37%;
+    left: 40%;
     animation: transfert-bleu 3.5s infinite;
 }
 
 #boule-rouge{
     top: 75%;
-    left: 14%;
+    left: 20%;
     animation: transfert-rouge 4s infinite;
 }
 
 #boule-violet{
     top: 50%;
-    left: 26%;
+    left: 30%;
     animation: transfert-violet 2.5s infinite;
 }
 
 #boule-vert{
     top: 65%;
-    left: 65%;
+    left: 60%;
     animation: transfert-vert 1.5s infinite;
 }
 
 #boule-jaune{
     top: 40%;
-    left: 55%;
+    left: 50%;
     animation: transfert-jaune 5.5s infinite;
 }
 
@@ -318,22 +329,22 @@ img{
 /* ---------------------------------etoile sapin------------------------- */
 #etoile{
     position: absolute;
-    top: -20%;
-    left: 30%;
+    top: -25px;
+    left: 57px;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    animation: rayonne 4s infinite;
+    border-radius: 50%;
+    opacity: 0.8;
 }
-polygon{
-    fill:yellow;
-    animation: etoile 4s infinite;
-}
-@keyframes etoile{
-    0% {fill:yellow;}
-    50% {fill:white;}
-    100% {fill:yellow;}
+#etoile img{
+    width: 100%;
 }
 
 #souhait{
     position: absolute;
-    bottom: 7%;
+    top: 450px;
     font-size: 3em;
     color: red;
     text-shadow: 3px 3px 5px rgb(241, 241, 85);
@@ -342,38 +353,78 @@ polygon{
 #pixel{
     z-index: 5;
     position: absolute;
-    width: 5%;
-    bottom: 60%;
-    left: 70%;
-    animation: pixel 3s forwards;
-    animation-delay: 2s;
-    opacity: 0;
+    width: 0;
+    bottom: 165px;
+    left: 220px;
+    animation: pixel 5s forwards;
+    animation-delay: 5s;
+    opacity: 1;
 }
 @keyframes pixel {
     0% {
         transform: rotateX(0deg);
-        width: 5%;
-        bottom: 60%;
-        left: 70%;
+        width: 0;
+        bottom: 165px;
+        left: 220px;
         opacity: 0;
     }
-    20%{
+    10%{
         opacity: 1;
     }
     100% {
         transform: rotateX(360deg);
-        width: 18%;
-        bottom: -4%;
+        width: 70px;
+        bottom: -88px;
+        left: 320px;
         opacity: 1;
     }
 }
 
+/* -------------------logo decodeur ---------------------- */
+.decodeur{
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    top: 90px;
+    left: 210px;
+    animation: decodeur 5s forwards;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+@keyframes decodeur {
+    0% {
+        transform: rotate(0deg);
+        width: 0;
+        top: 90px;
+        left: 210px;
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100% {
+        width: 150px;
+        top: 266px;
+        left: -2px;
+        transform: rotate(-20deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* ------------------envoi------------------- */
 #envoi{
     z-index: 10;
     position: absolute;
-    width: 10%;
-    right: 1%;
-    top: 1%;
+    width: 100px;
+    top: 10px;
+    left: 840px;
     display: flex;
     flex-direction: column;
     align-items: center;

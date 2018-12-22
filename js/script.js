@@ -7,4 +7,4 @@ icone.addEventListener("click",function(){
     } else{
         formulaire.style.display="none";
     }
-}); 
+});

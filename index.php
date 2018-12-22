@@ -9,11 +9,13 @@
 </head>
 <body>
     <!-- faire tomber la neige -->
+
     <div id="contenair">
         <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
         <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
         <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
         <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
+
         <div class="Neige">
             <div class="Neige__layer"></div>
             <div class="Neige__layer"></div>
@@ -43,7 +45,6 @@
                                 
                                 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
                                 mail($to, $object, $message, $headers);
-
                     }
                     ?>  
                 </form>
@@ -58,6 +59,7 @@
             <!-- traineau -->
             <div><img id="traineau" src="./img/traineau.png" alt="traineau"></div>
             <div id="pixel"><img src="./img/18-pixel-Kdo.png" alt="pixel"></div>
+            <div class="decodeur"><img src="./img/Logo-decodeur.png" alt="logo"></div>
             <!-- mot aformac -->
             <div id="motAformac">
                 <!-- sapin + boules --> 
@@ -67,9 +69,9 @@
                     <span class="boules" id="boule-jaune"></span>
                     <span class="boules" id="boule-vert"></span>
                     <span class="boules" id="boule-violet"></span>
-                    <svg id="etoile">
-                        <polygon points="50,9 60.5,39.5 92.7,40.1 67,59.5 76.4,90.3 50,71.9 23.6,90.3 32.9,59.5 7.2,40.1 39.4,39.5">
-                    </svg>
+                    <div id="etoile">
+                        <img src="./img/filled-star.png" alt="etoile">   
+                    </div>
                 </div>
                 <!-- lettre f -->
                 <div id="lettreF"><img class="images" src="./img/boisDeRenne.svg" alt="lettreF"></div>
@@ -90,7 +92,7 @@
             <marquee behavior="scroll" direction="left">Toute l'équipe et les D codeurs du lac du groupe AFORMAC vous souhaitent de Joyeuses Fêtes !</marquee>
         </div>
     </div>
-    <audio src="music/♪ ♫ INSTRUMENTAL ; Merry Christmas ; Snowman ; Christmas Music ; Musiques de Noël ; ambiance ♪ ♫.mp3"autoplay></audio> -->
+    <audio src="music/♪ ♫ INSTRUMENTAL ; Merry Christmas ; Snowman ; Christmas Music ; Musiques de Noël ; ambiance ♪ ♫.mp3"autoplay></audio>
     <script src="./js/script.js"></script>
 </body>
 </html>
