@@ -4,95 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Carte de Voeux</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>CV</title>
 </head>
 <body>
-    <!-- faire tomber la neige -->
-
     <div id="contenair">
-        <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
-        <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
-        <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
-        <img class="logoGN" src="./img/logogn2.png" alt="logoGN">
+        <header class="header">
+                <div class="header-titre">
+                    <h1>OUVRARD Fabien</h1>
+                    <p id="titre">Développeur Web</p>
+                </div>
+                <a href="#" class="header__icon" id="header__icon"></a>
+            <nav class="menu" id="menu">
+                <a href="#diplomestop">Diplomes</a>
+                <a href="#experiencetop">Experiences</a>
+                <a href="#competencetop">Competences</a>
+                <a href="#projetstop">Portfolio</a>
+                <a href="#perso">Information</a>
+            </nav>
+        </header>
+        <!-- div pour decaler le site a louverture du burger -->
+        <div class="pusher">   
+            <main>
+                <div id="diplomestop" class="top"></div>
+                <div id="diplomes">
+                    <h2>Mes Diplomes</h2>
+                        <div id="cadreDiplome">
+                            <div class="block-div1">
+                                <h3>Depuis septembre 2018 :</h3>
+                                    <p>Titre Professionnel Developpeur web/web mobile</p>
+                                    <p>Aformac</p>
+                                    <p>Bourges</p>
+                            </div>
+                           <div class="block-div1">
+                            <h3>2001 :</h3>
+                                    <p>BAC Pro MSMA</p>
+                                    <p>Saint Louis Technique</p>
+                                    <p>La Roche sur Yon</p>
+                            </div>
+                            <div class="block-div1">
+                                <h3>1999 :</h3>
+                                    <p>BEP MSMA</p>
+                                    <p>Saint Louis Technique</p>
+                                    <p>La Roche sur Yon</p>
+                            </div>
+                        </div>
+                </div>
+                <div id="experiencetop" class="top"></div>
 
-        <div class="Neige">
-            <div class="Neige__layer"></div>
-            <div class="Neige__layer"></div>
-            <div class="Neige__layer"></div>
-            <div class="Neige__layer"></div>
-        </div>
-        <div id="envoi">
-            <img id="icone" src="./img/icone_contact.png" alt="envoi">
-            <div id="formulaire"> 
-                <form method="POST">
-                    Envoyer la carte sur :
-                    <input type="email"  name="email" placeholder="email">
-                    <input type="submit" name="submit" value="valider">
-                    <?php
-                    // verification présence données
-                    if (isset($_POST['email'])) {
-                            
-                                $to = $_POST['email'];
-                                $object = 'Carte de voeux';
-                            
-                                $message = 'Voici le lien de notre carte de voeux Aformac : <br>
-                                            dcl.cartes.18pixel.fr/carreau/index.html';          
-                                
-                                $headers = 'From: D Codeurs du Lac - Aformac Berry'."\r\n";
-                                $headers .= 'Repply-To :'.$_POST['email']."\r\n";
-                                $headers .= 'MIME-Version: 1.0' ."\r\n";
-                                
-                                $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-                                mail($to, $object, $message, $headers);
-                    }
-                    ?>  
-                </form>
-            </div>  
-        </div> 
-        <div id="logoAformac">
-            <!-- images du logo aformac -->
-            <div id="disque">
-                <img  src="./img/logoAformac1Disqueb.png" alt="disque">
-            </div> 
-            <img id="arcs" src="./img/logoAformac1Arcs.png" alt="arcs">
-            <!-- traineau -->
-            <div><img id="traineau" src="./img/traineau.png" alt="traineau"></div>
-            <div id="pixel"><img src="./img/18-pixel-Kdo.png" alt="pixel"></div>
-            <div class="decodeur"><img src="./img/Logo-decodeur.png" alt="logo"></div>
-            <!-- mot aformac -->
-            <div id="motAformac">
-                <!-- sapin + boules --> 
-                <div id="sapin"><img src="./img/sapin.svg" alt="sapin">
-                    <span class="boules" id="boule-bleu"></span>
-                    <span class="boules" id="boule-rouge"></span>
-                    <span class="boules" id="boule-jaune"></span>
-                    <span class="boules" id="boule-vert"></span>
-                    <span class="boules" id="boule-violet"></span>
-                    <div id="etoile">
-                        <img src="./img/filled-star.png" alt="etoile">   
+                <div id="experience">
+                    <h2>Mes Experiences Professionnelles</h2>
+                        <div id="cadreExperience">
+                            <div class="block-div">
+                                <h3>Depuis 2012: Mécanicien aéronautique DAHER BA702 Avord</h3>
+                                        <p class="gras">Mécanicien aéronautique sur EMB-121 (XINGU):</p>
+                                        <ul>
+                                            <li>Visites périodiques spécialité vecteur</li>
+                                            <li>Dépannages spécialité vecteur</li>
+                                        </ul>
+                            </div>
+                            <div class="block-div">
+                                <h3>De 2002 à 2012: Militaire (Armée de l'Air) BA702 Avord</h3>
+                                    <p class="gras">Mécanicien aéronautique sur sur E3-F (AWACS):</p>
+                                    <ul>
+                                        <li>Visites périodiques spécialité vecteur</li>
+                                        <li>Dépannages spécialité vecteur</li>
+                                    </ul>
+                                    <p class="gras">Responsable de l'atelier roue:</p>
+                                    <ul>
+                                        <li>Gestions d'une équipe de 4 personnes</li>
+                                        <li>Gestions des équipements et outillages</li>
+                                    </ul>
+                            </div>
+                        </div>
+                </div>
+                <div id="competencetop" class="top"></div>
+
+                <div id="competence">
+                    <h2>Mes Compétences</h2>
+                        <div id="icone"> 
+                            <div class="cadre-icone">
+                                <h3>HTML</h3>
+                                <img src="./img/htmlnotext.png" alt="html">
+                            </div>
+                            <div class="cadre-icone">
+                                <h3>CSS</h3>
+                                <img src="./img/cssnotext.png" alt="css">
+                            </div>
+                            <div class="cadre-icone">
+                                <h3>Javascript</h3>
+                                <img src="./img/jsnotext.png" alt="js">
+                            </div>
+                            <div class="cadre-icone">
+                                <h3>PHP</h3>
+                                <img src="./img/phpnotext.png" alt="php">
+                            </div>
+                            <div class="cadre-icone">
+                                <h3>MYSQL</h3>
+                                <img src="./img/mysqlnotext.png" alt="mysql">
+                            </div>
+                        </div>
+                </div>
+                <div id="projetstop" class="top"></div>
+
+                <div id="projets">
+                    <h2>Portfolio</h2>
+                        <div id="apercu">
+                            <div class="block">
+                                <h3>Reproduction d'une image en HTML et CSS</h3>
+                                    <a href="./Exercices/Reproduction-img" target="_blank"><img src="./img/reproduction.png" alt="explorateur"></a>
+                                    <a class="logoGithub" href="https://github.com/dclonyx/Reproduction-img" target="_blank"><img src="./img/github.svg.png" alt=""></a>
+                            </div>
+
+                            <div class="block">
+                                <h3>Puissance 4</h3>
+                                    <a href="./Exercices/Puissance-4" target="_blank"><img src="./img/puissance4.png" alt="puissance4"></a>
+                                    <a class="logoGithub" href="https://github.com/dclonyx/Puissance-4" target="_blank"><img src="./img/github.svg.png" alt=""></a>
+                            </div>
+
+                            <div class="block">
+                                <h3>Shifumi</h3>
+                                    <a href="./Exercices/Shifumi" target="_blank"><img src="./img/shifumi.png" alt="shifumi"></a>
+                                    <a class="logoGithub" href="https://github.com/dclonyx/Shifumi" target="_blank"><img src="./img/github.svg.png" alt=""></a>
+                            </div>
+
+                            <div class="block">
+                                <h3>Table de Multiplication</h3>
+                                    <a href="./Exercices/table_de_multiplication" target="_blank"><img src="./img/tables.png" alt="tables"></a>
+                                    <a class="logoGithub" href="https://github.com/dclonyx/table_de_multiplication" target="_blank"><img src="./img/github.svg.png" alt=""></a>
+                            </div>
+
+                            <div class="block">
+                                <h3>Carte de voeux</h3>
+                                    <a href="./Exercices/carte-de-voeux" target="_blank"><img src="./img/carte-voeux.jpg" alt="carte-voeux"></a>
+                                    <a class="logoGithub" href="https://github.com/dclonyx/carte-voeux" target="_blank"><img src="./img/github.svg.png" alt=""></a>
+                            </div>
                     </div>
                 </div>
-                <!-- lettre f -->
-                <div id="lettreF"><img class="images" src="./img/boisDeRenne.svg" alt="lettreF"></div>
-                <!-- bonhome de neige lettre O -->
-                <div id="bonhomeDeNeige"><img class="images" src="./img/neige.svg" alt="bonhomeDeNeige"></div>
-                <!-- lettre r -->
-                <div id="lettreR"><img class="images" src="./img/sucreDorge.png" alt="lettreR"></div>
-                <!-- lettre m -->
-                <div id="lettreM"><img src="./img/maisons2.png" alt="lettreM"></div>                
-                <!-- lettre a -->
-                <div id="lettreA"><img class="images" src="./img/aBonnet.png" alt="lettreA"></div>
-                <!-- lettre c -->
-                <div id="lettreC"><img class="images" src="./img/c.png" alt="lettreC"></div>
-                <div id="chausette"><img class="images chausette" src="./img/chaussettes-de-noel.png" alt="chausette"></div>
-            </div>
+
+                <div id="perso">
+                    <h2>Informations Personnelles</h2>
+                        <div id="cadrePerso">
+                            <div id="photo-perso"><img src="./img/perso.jpg" alt=""></div>
+                            <p>OUVRARD Fabien</p>
+                            <p>06-65-19-47-58</p>
+                            <p>fabou21@free.fr</p>
+                            <p>Bourges</p>
+                            <p>Permis B</p>
+                            <p>Véhicule Personnel</p>
+                        </div>
+                </div>
+                <!-- cache le site a l ouverture du menu burger -->
+                <div id="cache"></div>
+
+                <footer>
+                    <div id="logos">
+                        <div class="block-logo">
+                            <a href="https://www.linkedin.com/in/fabien-ouvrard-976923170/" target="_blank" class="logo"><img src="./img/icon-linkedin.png" alt="logo-linkedin" id="link"></a>
+                        </div>
+                        <div class="block-logo">
+                            <a href="https://github.com/dclonyx?tab=repositories" target="_blank" id="github"><img src="./img/github.svg.png" alt="logo-github"></a>
+                        </div> 
+                    </div>
+                    <div id="contact">
+                        <a href="php/contact.php">Contact</a>
+                    </div>
+                </footer>
+            </main>
         </div>
-        <div id="souhait">
-            <marquee behavior="scroll" direction="left">Toute l'équipe et les D codeurs du lac du groupe AFORMAC vous souhaitent de Joyeuses Fêtes !</marquee>
+        <!-- bouton retour haut de page -->
+        <div id="retourhaut">
+            <a href="#top"><img src="./img/to_top.png" alt="top"></a>
         </div>
     </div>
-    <audio src="music/♪ ♫ INSTRUMENTAL ; Merry Christmas ; Snowman ; Christmas Music ; Musiques de Noël ; ambiance ♪ ♫.mp3"autoplay></audio>
-    <script src="./js/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

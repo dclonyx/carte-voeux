@@ -1,0 +1,450 @@
+@import "reset"
+//  mixin
+@mixin display
+    display: flex
+    flex-direction: column
+    align-items: center
+
+@mixin media-min($_min-width)
+    @media screen and (min-width: $_min-width)
+        @content
+
+// variables
+
+$header-bg: #0277BD
+$header-ht: 80px
+
+//   gestion des textes
+
+h1
+    font-size: 3.3vh
+    @include media-min (960px)
+        font-size: 4vh
+    @include media-min (1200px)
+        font-size: 5vh
+
+h2
+    width: 100%
+    text-transform: uppercase
+    font-size: 3vh
+    margin: 20px 0
+    padding: 10px 0
+    box-shadow: 0 5px 5px $header-bg
+    border: 1px solid $header-bg
+    border-radius: 25px
+    @include media-min (960px)
+        font-size: 3.5vh
+    @include media-min (1200px)
+        font-size: 4vh
+
+h3
+    font-size: 2vh
+    margin: 10px
+    @include media-min (960px)
+        font-size: 3.2vh
+    @include media-min (1200px)
+        font-size: 3.8vh
+
+p
+    font-size: 2vh
+    margin: 0.3% 0
+    @include media-min (960px)
+        font-size: 3vh
+    @include media-min (1200px)
+        font-size: 3.5vh
+
+ul
+    margin: 1rem 0
+
+li
+    font-size: 2.5vh
+    list-style-type: none
+    @include media-min (960px)
+        font-size: 3vh
+    @include media-min (1200px)
+        font-size: 3.5vh
+
+a
+    text-decoration: none
+    &:visited
+        color: black
+
+html
+    width: 100%
+    height: 100%
+    
+body
+    font-family: 'Roboto', sans-serif
+    width: 100%
+    height: 100vh
+    text-align: center
+    background-image: url("../img/maxresdefault.jpg")
+    background-attachment: fixed
+    background-size: cover 
+
+// gestion du header
+
+.header
+    z-index: 3
+    width: 100%
+    height: $header-ht
+    background-color: $header-bg
+    box-shadow: 5px 5px black
+    border-radius: 5px
+    color: black
+    position: fixed
+    display: flex
+    justify-content: space-between
+    .header-titre
+        width: 60%
+        height: $header-ht
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        h1
+            float: left
+            padding-left: 15px
+        p
+            padding-left: 15px
+
+        
+    
+    // menu burger
+
+    .header__icon
+        position: relative
+        display: block
+        width: 50px
+        height: $header-ht
+        cursor: pointer
+        @include media-min (800px)
+            display: none
+        &::after
+            content: ""
+            position: absolute
+            width: 1.5em
+            height: 0px
+            top: 15px
+            right: 16px
+            box-shadow: 0 8px 0 1px white, 0 16px 0 1px white, 0 24px 0 1px white
+
+    // gestion menu nav
+
+.menu
+    z-index: 1
+    float: right
+    width: 300px
+    height: 100vmax
+    position: absolute
+    right: 0
+    top: $header-ht
+    background-color: darken($header-bg, 10)
+    opacity: .95
+    border-radius: 5px
+    transform: translateX(+300px)
+    transition: translateX 0.2s
+    @include media-min (800px)
+        transform: translateY(0px)
+        background-color: rgba(0,0,0,0)
+        top: 0
+        width: 560px
+        height: $header-ht
+        line-height: $header-ht
+    @include media-min (960px)
+        width: 630px
+    @include media-min (1200px)
+        width: 780px
+    a
+        color: black
+        font-size: 2.5vh
+        height: 80px
+        margin-top: 4px
+        display: block
+        line-height: 80px
+        text-align: center
+        border-bottom: 1px solid $header-bg
+        padding: 2px
+        @include media-min (800px)
+            font-size: 2vh
+            line-height: 40px
+            display: inline
+        @include media-min (960px)
+            font-size: 2vh
+        @include media-min (1200px)
+            font-size: 2.5vh
+        &:hover
+            color: white
+
+// gestion animation ouverture menu burger
+
+.with__sidebar
+    .pusher
+        transform: translateX(-300px)
+    .menu
+        transform: translateX(0px)
+    #cache
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        background-color: rgba(0,0,0,0.1)
+
+.pusher
+    height: 100%
+    transition: translateX 0.2s
+    transform: translateX(0px)
+
+//   gestion main
+
+main
+    z-index: 1
+    padding: 0 20px
+    @include display
+    justify-content: space-around
+    color: white
+    
+    // gestion div diplome
+        
+    #diplomes
+        position: relative
+        width: 100%
+        @include display
+        #cadreDiplome
+            width: 100%
+            padding: 1% 0
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            h3
+                margin: 10px
+
+    // gestino div competence
+        
+    #competence
+        position: relative
+        width: 100%
+        #icone
+            width: 100%
+            display: flex
+            justify-content: space-around
+            align-items: center
+            flex-wrap: wrap 
+            padding: 1% 0  
+            .cadre-icone
+                width: 100px
+                margin: 2%
+                @include media-min (960px)
+                    width: 180px
+                img
+                    width: 100%
+    // gestin div experience
+
+    #experience
+        position: relative
+        width: 100%
+        #cadreExperience
+            padding: 1% 0
+        .gras
+            font-weight: bold
+
+    // gestion div projet
+
+    #projets
+        position: relative
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        color : white
+        #apercu
+            width: 100%
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            padding: 1% 0  
+            img
+                width: 100%
+                &:hover
+                    box-shadow: 0 0 100px 2px white
+                    border: 1px solid white
+                    transition-duration: 0.2s
+
+    // gestion div perso
+
+    #perso
+        position: relative
+        width: 100%
+        #cadrePerso
+            padding: 1% 0
+            #photo-perso
+                img
+                    width: 20%
+                    border-radius: 10px
+
+    // gestions des block-div
+
+.block-div
+    margin: 50px 0
+.block-div1
+    margin: 20px 0
+
+    // gestion des des block des projets
+
+.block
+    width: 80%
+    margin: 20px
+    @include media-min (960px)
+        width: 45%
+    @include media-min (1200px)
+        width: 29%
+    .logoGithub
+        img
+            width: 15% !important
+            box-shadow: 5px 5px 5px black
+            border-radius: 50px
+            background-color: $header-bg
+            margin: 5px 0 
+            &:hover
+                border-radius: 10px
+                transition-duration: 0.2s
+
+
+
+.top
+    height: $header-ht
+
+    // gestion du footer
+
+footer
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin: 7px 0
+    #logos
+        width: 35%
+        display : flex
+        justify-content: space-around
+        a
+            width: 35px
+            border-radius: 25px
+            @include media-min(960px)
+                width: 50px
+            @include media-min(1200px)
+                width: 80px
+        img
+            width: 100%
+            height: 100%
+            box-shadow: 5px 5px 5px black
+            border-radius: 50px
+            background-color: $header-bg
+            &:hover
+                border-radius: 10px
+                transition-duration: 0.2s
+                border: 1px solid white
+        #link
+            background-color: white
+        .block-logo
+            width: 40px
+
+
+    #contact
+        width: 30%
+        padding: 1%
+        border-radius: 50px
+        background-color: $header-bg
+        box-shadow: 5px 5px 5px black
+        @include media-min(960px)
+            width: 10%        
+        &:hover
+            border-radius: 10px
+            transition-duration: 0.2s
+            border: 1px solid white
+        a
+            font-size: 2vh
+            color: black
+            @include media-min(960px)
+                font-size: 2.5vh
+            @include media-min(1200px)
+                font-size: 3vh
+
+// bouton pour revenir en haut de la page
+
+#retourhaut
+    z-index: 4
+    position: fixed
+    bottom : 15px
+    right: -100px
+    opacity: 0.7
+    cursor: pointer
+             
+// gestion du formulaire page contact
+
+form
+    width: 100%
+    height: 70%
+    @include display
+    justify-content: space-around
+    input
+        width: 50%
+        height: 7%
+        text-align: center
+        font-size: 2vh
+        border-radius: 25px
+    #envoyer
+        width: 30%
+        height: 7%
+        background-color: $header-bg
+        border-radius: 25px
+        font-size: 3vh
+    textarea
+        width: 80%
+        height: 30%
+        border-radius: 5px
+        font-size: 2vh
+    a
+        font-size: 3vh
+        margin: auto
+#pagecontact
+    line-height: 80px
+    width: 100%
+    height: 80px
+    padding: 1% 0
+    background-color:  $header-bg
+    box-shadow: 5px 5px black
+    border-radius: 5px
+    color: black
+    text-align: center
+
+// page après validation du formulaire
+
+#retourCv
+    width: 100%
+    height: 100%
+    @include display
+    justify-content: space-around
+    color: white
+    
+// bouton retour apres validation du formulaire et sur page contact
+
+#retour
+    text-align: center
+    width: 30%
+    height: 7%
+    border-radius: 25px
+    background-color:  $header-bg
+    box-shadow: 5px 5px 5px black
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &:hover
+        border-radius: 10px
+        transition-duration: 0.2s
+        border: 1px solid white
+    a
+        width: 100%
+        font-size: 3vh
